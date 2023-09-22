@@ -40,17 +40,16 @@ apt dist-upgrade
 apt autoremove
 ```
 
-Re-boot proxmox.
+Reboot proxmox.
 
 ```shell script
 reboot
 ```
-Give it a few minutes to come back up.
 
 Comment out and add the following in /etc/default/grub
 
 ```shell script
-#GRUB_CMDLINE_LINUX_DEFAULT="quiet"
+# GRUB_CMDLINE_LINUX_DEFAULT="quiet"
 GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on"
 ```
 
@@ -69,12 +68,76 @@ vfio_pci
 vfio_virqfd
 ```
 
-Reboot proxmox
+Reboot proxmox.
 
 ```shell script
 reboot
 ```
-Give it a minute or two to come back up
+
+I found a useful script online that shows you the hardware layout of the OMMU groups if you need to pass through some of your hardware to a virtual machine.
+
+```shell script
+# Script found at https://wiki.archlinux.org/title/PCI_passthrough_via_OVMF
+# The following script should allow you to see how your various PCI devices are mapped to IOMMU groups. 
+# If it does not return anything, you either have not enabled IOMMU support properly or your hardware does not support it.
+
+#!/bin/bash
+shopt -s nullglob
+for g in $(find /sys/kernel/iommu_groups/* -maxdepth 0 -type d | sort -V); do
+    echo "IOMMU Group ${g##*/}:"
+    for d in $g/devices/*; do
+        echo -e "\t$(lspci -nns ${d##*/})"
+    done;
+done;
+```
+
+As you can see from the output, the PC has 4 built in NICS, which will be ideal if I decide at some point, replace it and repurpose it as a home router.
+
+```shell script
+IOMMU Group 0:
+        00:02.0 VGA compatible controller [0300]: Intel Corporation JasperLake [UHD Graphics] [8086:4e61] (rev 01)
+IOMMU Group 1:
+        00:00.0 Host bridge [0600]: Intel Corporation Device [8086:4e24]
+IOMMU Group 2:
+        00:14.0 USB controller [0c03]: Intel Corporation Device [8086:4ded] (rev 01)
+        00:14.2 RAM memory [0500]: Intel Corporation Device [8086:4def] (rev 01)
+        00:14.5 SD Host controller [0805]: Intel Corporation Device [8086:4df8] (rev 01)
+IOMMU Group 3:
+        00:15.0 Serial bus controller [0c80]: Intel Corporation Serial IO I2C Host Controller [8086:4de8] (rev 01)
+        00:15.2 Serial bus controller [0c80]: Intel Corporation Device [8086:4dea] (rev 01)
+IOMMU Group 4:
+        00:16.0 Communication controller [0780]: Intel Corporation Management Engine Interface [8086:4de0] (rev 01)
+IOMMU Group 5:
+        00:17.0 SATA controller [0106]: Intel Corporation Device [8086:4dd3] (rev 01)
+IOMMU Group 6:
+        00:1c.0 PCI bridge [0604]: Intel Corporation Device [8086:4dba] (rev 01)
+IOMMU Group 7:
+        00:1c.4 PCI bridge [0604]: Intel Corporation Device [8086:4dbc] (rev 01)
+IOMMU Group 8:
+        00:1c.5 PCI bridge [0604]: Intel Corporation Device [8086:4dbd] (rev 01)
+IOMMU Group 9:
+        00:1c.6 PCI bridge [0604]: Intel Corporation Device [8086:4dbe] (rev 01)
+IOMMU Group 10:
+        00:1c.7 PCI bridge [0604]: Intel Corporation Device [8086:4dbf] (rev 01)
+IOMMU Group 11:
+        00:1f.0 ISA bridge [0601]: Intel Corporation Device [8086:4d87] (rev 01)
+        00:1f.3 Audio device [0403]: Intel Corporation Jasper Lake HD Audio [8086:4dc8] (rev 01)
+        00:1f.4 SMBus [0c05]: Intel Corporation Jasper Lake SMBus [8086:4da3] (rev 01)
+        00:1f.5 Serial bus controller [0c80]: Intel Corporation Jasper Lake SPI Controller [8086:4da4] (rev 01)
+IOMMU Group 12:
+        01:00.0 Non-Volatile memory controller [0108]: Sandisk Corp WD Blue SN570 NVMe SSD 1TB [15b7:501a]
+IOMMU Group 13:
+        02:00.0 Ethernet controller [0200]: Intel Corporation Ethernet Controller I226-V [8086:125c] (rev 04)
+IOMMU Group 14:
+        03:00.0 Ethernet controller [0200]: Intel Corporation Ethernet Controller I226-V [8086:125c] (rev 04)
+IOMMU Group 15:
+        04:00.0 Ethernet controller [0200]: Intel Corporation Ethernet Controller I226-V [8086:125c] (rev 04)
+IOMMU Group 16:
+        05:00.0 Ethernet controller [0200]: Intel Corporation Ethernet Controller I226-V [8086:125c] (rev 04)
+```
+
+![My Proxmox screen with 3 running Virtual Machines](/assets/PVE.png "My Proxmox screen with 3 running Virtual Machines")
+
 
 ### References  
 
