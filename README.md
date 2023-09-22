@@ -74,6 +74,8 @@ Reboot proxmox.
 reboot
 ```
 
+## Useful bits and bobs
+
 I found a useful script online that shows you the hardware layout of the OMMU groups if you need to pass through some of your hardware to a virtual machine.
 
 ```shell script
