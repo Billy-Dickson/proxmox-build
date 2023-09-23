@@ -83,6 +83,9 @@ reboot
 3. A local DNS resolver on your network eg. [Pi Hole](https://pi-hole.net/), [OPNsense](https://opnsense.org/), [Pfsense](https://www.pfsense.org/).
 4. A working Proxmox Server
 
+![My Proxmox screen with a certificate](/assets/certificate.png "My Proxmox screen with a valid certificate")
+
+
 Run through the video in the reference, works great and will gives you a working certificate. Saying that, it only saves you a click. :smiley:
 
 ## Useful bits and bobs
