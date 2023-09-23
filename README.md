@@ -74,6 +74,17 @@ Reboot proxmox.
 reboot
 ```
 
+## Optional setting up a Let's Encrypt Certificate
+
+### Prerequisites
+
+1. A public domain name, purchased from a domain register the likes of [Cloudflare](https://www.cloudflare.com/products/registrar/) (my choice) or another reputable [company](https://www.top10.com/hosting/domainhosting-comparison-uk?utm_source=google&kw=purchasing%20a%20domain&c=634648085736&t=search&p=&m=e&adpos=&dev=c&devmod=&mobval=0&network=g&campaignid=18915521216&groupid=151971921508&targetid=kwd-106697532&interest=&physical=9046881&feedid=&a=11181&ts=hi&topic=&test=google_uk_domain&clicktype=&camtype=&gclid=CjwKCAjwmbqoBhAgEiwACIjzEAfKVmB29XPDx9TJojlDq6qPOR0BKBs5-oivYm3M6T3hg7kxunNWVBoCf_QQAvD_BwE).
+2. An API key to use from your domain register.
+3. A local DNS resolver on your network eg. [Pi Hole](https://pi-hole.net/), [OPNsense](https://opnsense.org/), [Pfsense](https://www.pfsense.org/).
+4. A working Proxmox Server
+
+Run through the video in the reference, works great and will gives you a working certificate. Saying that, it only saves you a click. :smiley:
+
 ## Useful bits and bobs
 
 I found a useful script online that shows you the hardware layout of the OMMU groups if you need to pass through some of your hardware to a virtual machine.
@@ -151,3 +162,4 @@ IOMMU Group 16:
 - HomeTech Hacker - 5 Great [Proxmox Small Form Factor Hardware Alternatives](https://hometechhacker.com/5-great-proxmox-small-form-factor-hardware-options/)
 - Beelink GTR5 review  [A mini Ryzen](https://www.tomsguide.com/reviews/beelink-gtr5)
 - Techno Tim  [Documentation](https://technotim.live/)
+- Proxmox 8.0 [Let's Encrypt Tutorial](https://www.youtube.com/watch?v=CDmklu67nSU) from Trey Does Devops
