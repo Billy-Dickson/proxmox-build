@@ -7,7 +7,8 @@
 | Hardware | Description |
 |-----|----|
  | [Firewall Mini PC Pentium N6005 N5105](https://www.aliexpress.com/item/1005003991560461.html?spm=a2g0o.order_list.order_list_main.4.37b51802ONX0sX)  | 4 x Intel i226-V 2.5G Lans 2*DDR4 2*M.2 NVMe AES-NI Home Router PC Network Security Appliance. |
- | [Samsung 870 QVO](https://www.amazon.co.uk/gp/product/B089QXQ1TV/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&th=1) | 1 TB 2.5 Inch Internal Solid State (SSD) |
+ | [WD Blue 256G NVME](https://www.amazon.co.uk/gp/product/B09HKGGPLR/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) | M.2 2280 PCIe Gen3 NVMe up to 3300 MB/s read speed |
+ | [Samsung 1TB 870 QVO ](https://www.amazon.co.uk/gp/product/B089QXQ1TV/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&th=1) | 2.5 Inch Internal Solid State (SSD) |
 | [2 x Crucial RAM 8GB DDR4](<https://www.amazon.co.uk/gp/product/B08C4Z69LN/ref=ppx_yo_dt_b_asin_title_o08_s00?ie=UTF8&psc=1>) | 3200MHz CL22 (or 2933MHz or 2666MHz) Portable Memory CT8G4SFRA32A |
 
 ## Installation Instructions
