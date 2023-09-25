@@ -94,11 +94,17 @@ I found a useful script online that shows you the hardware layout of the OMMU gr
 
 ```shell script
 # Script found at https://wiki.archlinux.org/title/PCI_passthrough_via_OVMF
-# The following script should allow you to see how your various PCI devices are mapped to IOMMU groups. 
+# The following script should allow you to see how your various PCI devices 
+# are mapped to IOMMU groups.
+# 
 # If it does not return anything, you either have not enabled IOMMU support properly. 
 # Or your hardware does not support it.
-
+#
+# Filename - iommu.sh
+#
 #!/bin/bash
+#
+
 shopt -s nullglob
 for g in $(find /sys/kernel/iommu_groups/* -maxdepth 0 -type d | sort -V); do
     echo "IOMMU Group ${g##*/}:"
