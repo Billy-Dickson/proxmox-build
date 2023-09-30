@@ -11,6 +11,9 @@
  | [Samsung 1TB 870 QVO ](https://www.amazon.co.uk/gp/product/B089QXQ1TV/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&th=1) | 2.5 Inch Internal Solid State (SSD) |
 | [2 x Crucial RAM 8GB DDR4](<https://www.amazon.co.uk/gp/product/B08C4Z69LN/ref=ppx_yo_dt_b_asin_title_o08_s00?ie=UTF8&psc=1>) | 3200MHz CL22 (or 2933MHz or 2666MHz) Portable Memory CT8G4SFRA32A |
 
+ ![Photograph of new proxmox server](/assets/Screenshot%20from%202023-09-30%2021-45-49.png)
+
+
 ## Installation Instructions
 
 I've installed Proxmox on the NVME drive and used the SSD drive to store ISO images, snapshots and virtual machines. I've been using it for a number of months now and I've had no problems so far. As far as backups goes, I've setup proxmox to backup my VM's every day at 21:00, just in case things go south.
@@ -161,7 +164,6 @@ IOMMU Group 16:
 ```
 
 ![My Proxmox screen with 3 running Virtual Machines](/assets/PVE.png "My Proxmox screen with 3 running Virtual Machines")
-
 
 ### References  
 
