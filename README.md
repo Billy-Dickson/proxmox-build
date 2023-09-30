@@ -2,15 +2,15 @@
 
  In January this year (2023) bought myself a cheap PC from AliExpress £157, 16G of memory and a cheap NVME and SSD Drive. Total spend was about £250, with the hope of teaching myself about Proxmox, Virtualization and Docker.
 
- ![Photograph of new proxmox server](/assets/Screenshot%20from%202023-09-30%2021-45-49.png)
- 
+![Photograph of new proxmox server](/assets/Screenshot%20from%202023-09-30%2021-45-49.png)
+
 ## PC Specification  
 
 | Hardware | Description |
 |-----|----|
  | [Firewall Mini PC Pentium N6005 N5105](https://www.aliexpress.com/item/1005003991560461.html?spm=a2g0o.order_list.order_list_main.4.37b51802ONX0sX)  | 4 x Intel i226-V 2.5G Lans 2*DDR4 2*M.2 NVMe AES-NI Home Router PC Network Security Appliance. |
  | [WD Blue 256G NVME](https://www.amazon.co.uk/gp/product/B09HKGGPLR/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) | M.2 2280 PCIe Gen3 NVMe up to 3300 MB/s read speed |
- | [Samsung 1TB 870 QVO ](https://www.amazon.co.uk/gp/product/B089QXQ1TV/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&th=1) | 2.5 Inch Internal Solid State (SSD) |
+ | [Samsung 1TB 870 QVO](https://www.amazon.co.uk/gp/product/B089QXQ1TV/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&th=1) | 2.5 Inch Internal Solid State (SSD) |
 | [2 x Crucial RAM 8GB DDR4](<https://www.amazon.co.uk/gp/product/B08C4Z69LN/ref=ppx_yo_dt_b_asin_title_o08_s00?ie=UTF8&psc=1>) | 3200MHz CL22 (or 2933MHz or 2666MHz) Portable Memory CT8G4SFRA32A |
 
 ## Installation Instructions
@@ -35,6 +35,7 @@ Comment out the following in /etc/apt/source.list.d/pve-enterprise.list
 ```shell script
 # deb https://enterprise.proxmox.com/debian/pve bookworm pve-enterprise
 ```
+
 At the the prompt, type the following
 
 ```shell script
@@ -87,7 +88,6 @@ reboot
 4. A working Proxmox Server
 
 ![My Proxmox screen with a certificate](/assets/certificate.png "My Proxmox screen with a valid certificate")
-
 
 Run through the video in the reference, works great and will gives you a working certificate. Saying that, it only saves you a click. :smiley:
 
