@@ -1,7 +1,9 @@
-# Home Proxmox Server
+# Cheap Home Proxmox Server
 
  In January this year (2023) bought myself a cheap PC from AliExpress £157, 16G of memory and a cheap NVME and SSD Drive. Total spend was about £250, with the hope of teaching myself about Proxmox, Virtualization and Docker.
 
+ ![Photograph of new proxmox server](/assets/Screenshot%20from%202023-09-30%2021-45-49.png)
+ 
 ## PC Specification  
 
 | Hardware | Description |
@@ -10,9 +12,6 @@
  | [WD Blue 256G NVME](https://www.amazon.co.uk/gp/product/B09HKGGPLR/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) | M.2 2280 PCIe Gen3 NVMe up to 3300 MB/s read speed |
  | [Samsung 1TB 870 QVO ](https://www.amazon.co.uk/gp/product/B089QXQ1TV/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&th=1) | 2.5 Inch Internal Solid State (SSD) |
 | [2 x Crucial RAM 8GB DDR4](<https://www.amazon.co.uk/gp/product/B08C4Z69LN/ref=ppx_yo_dt_b_asin_title_o08_s00?ie=UTF8&psc=1>) | 3200MHz CL22 (or 2933MHz or 2666MHz) Portable Memory CT8G4SFRA32A |
-
- ![Photograph of new proxmox server](/assets/Screenshot%20from%202023-09-30%2021-45-49.png)
-
 
 ## Installation Instructions
 
