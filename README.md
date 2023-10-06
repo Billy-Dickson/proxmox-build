@@ -174,3 +174,4 @@ IOMMU Group 16:
 - Beelink GTR5 review  [A mini Ryzen](https://www.tomsguide.com/reviews/beelink-gtr5)
 - Techno Tim  [Documentation](https://technotim.live/)
 - Proxmox 8.0 [Let's Encrypt Tutorial](https://www.youtube.com/watch?v=CDmklu67nSU) from Trey Does Devops
+- Proxmox 8.0 [PCIe Passthrough Tutorial](https://youtu.be/_hOBAGKLQkI?si=CK0bAtgs9L1gtcOI) - Craft Computing
