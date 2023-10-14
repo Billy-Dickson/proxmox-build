@@ -164,7 +164,7 @@ IOMMU Group 16:
 
 ![My Proxmox screen with 3 running Virtual Machines](/assets/PVE.png "My Proxmox screen with 3 running Virtual Machines")
 
-### References  
+### References
 
 - Download [Proxmox Software](https://hometechhacker.com/5-great-proxmox-small-form-factor-hardware-options/)
 - Proxmox VE [Documentation](https://pve.proxmox.com/pve-docs/)
